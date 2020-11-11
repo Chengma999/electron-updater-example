@@ -1,6 +1,6 @@
 {
   "name": "electron-updater-example",
-  "version": "0.7.9",
+  "version": "0.8.0",
   "main": "main.js",
   "description": "electron-updater example project",
   "author": "Cheng Ma",
@@ -8,7 +8,7 @@
     "publish": "build -p always"
   },
   "devDependencies": {
-    "electron": "^3.0.2",
+    "electron": "^10.1.5",
     "electron-builder": "^20.28.4"
   },
   "dependencies": {
@@ -29,10 +29,12 @@
       ],
       "icon": "build/logo.png"
     },
-    "publish": [{
-      "provider": "github",
-      "owner": "Chengma999",
-      "repo": "electron-updater-example"
-  }]
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "Chengma999",
+        "repo": "electron-updater-example"
+      }
+    ]
   }
 }
