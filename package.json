@@ -1,9 +1,9 @@
 {
   "name": "electron-updater-example",
-  "version": "0.7.1",
+  "version": "0.7.9",
   "main": "main.js",
   "description": "electron-updater example project",
-  "author": "Matt Haggard",
+  "author": "Cheng Ma",
   "scripts": {
     "publish": "build -p always"
   },
@@ -16,13 +16,23 @@
     "electron-updater": "^4.0.6"
   },
   "build": {
-    "appId": "com.github.iffy.electronupdaterexample",
-    "mac": {
-      "category": "your.app.category.type",
+    "appId": "com.github.Chengma999.electronupdaterexample",
+    "win": {
       "target": [
-        "zip",
-        "dmg"
-      ]
-    }
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
+      "icon": "build/logo.png"
+    },
+    "publish": [{
+      "provider": "github",
+      "owner": "Chengma999",
+      "repo": "electron-updater-example"
+  }]
   }
 }
